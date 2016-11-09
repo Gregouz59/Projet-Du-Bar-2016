@@ -25,9 +25,31 @@ namespace ProjetDuBar
         public barModule1()
         {
             InitializeComponent();
+            drinkBeer1.Hide();
+            drinkCocaButton.Hide();
+            drinkBeerRinceCochon.Hide();
         }
 
         private void drinkBeer1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //barmanButton
+        private void button6_Click(object sender, EventArgs e)
+        {
+            drinkBeer1.Show();
+            drinkCocaButton.Show();
+            drinkBeerRinceCochon.Show();
+            barmanButton.Hide(); //désolé j'ai changer le nom après coup, button6=barmanButton
+        }
+
+        private void drinkCocaButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void drinkBeerRinceCochon_Click(object sender, EventArgs e)
         {
 
         }

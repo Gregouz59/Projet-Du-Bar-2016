@@ -35,7 +35,8 @@
             this.progressBarArgent = new System.Windows.Forms.ProgressBar();
             this.progressBarAlcool = new System.Windows.Forms.ProgressBar();
             this.otherBarButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.getMoneyButton = new System.Windows.Forms.Button();
+            this.sexAppealBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // enterNewGame
@@ -66,14 +67,14 @@
             // 
             // progressBarArgent
             // 
-            this.progressBarArgent.Location = new System.Drawing.Point(614, 387);
+            this.progressBarArgent.Location = new System.Drawing.Point(614, 358);
             this.progressBarArgent.Name = "progressBarArgent";
             this.progressBarArgent.Size = new System.Drawing.Size(147, 23);
             this.progressBarArgent.TabIndex = 3;
             // 
             // progressBarAlcool
             // 
-            this.progressBarAlcool.Location = new System.Drawing.Point(614, 358);
+            this.progressBarAlcool.Location = new System.Drawing.Point(614, 329);
             this.progressBarAlcool.Name = "progressBarAlcool";
             this.progressBarAlcool.Size = new System.Drawing.Size(147, 23);
             this.progressBarAlcool.TabIndex = 4;
@@ -84,24 +85,34 @@
             this.otherBarButton.Name = "otherBarButton";
             this.otherBarButton.Size = new System.Drawing.Size(147, 23);
             this.otherBarButton.TabIndex = 5;
-            this.otherBarButton.Text = "aller à un autre bar";
+            this.otherBarButton.Text = "aller à l\'appart café";
             this.otherBarButton.UseVisualStyleBackColor = true;
+            this.otherBarButton.Click += new System.EventHandler(this.otherBarButton_Click);
             // 
-            // button2
+            // getMoneyButton
             // 
-            this.button2.Location = new System.Drawing.Point(614, 254);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "boire une biére rince cochon";
-            this.button2.UseVisualStyleBackColor = true;
+            this.getMoneyButton.Location = new System.Drawing.Point(614, 254);
+            this.getMoneyButton.Name = "getMoneyButton";
+            this.getMoneyButton.Size = new System.Drawing.Size(147, 23);
+            this.getMoneyButton.TabIndex = 6;
+            this.getMoneyButton.Text = "aller retirer de l\'argent";
+            this.getMoneyButton.UseVisualStyleBackColor = true;
+            this.getMoneyButton.Click += new System.EventHandler(this.getMoneyButton_Click);
+            // 
+            // sexAppealBar
+            // 
+            this.sexAppealBar.Location = new System.Drawing.Point(614, 387);
+            this.sexAppealBar.Name = "sexAppealBar";
+            this.sexAppealBar.Size = new System.Drawing.Size(147, 23);
+            this.sexAppealBar.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 451);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.sexAppealBar);
+            this.Controls.Add(this.getMoneyButton);
             this.Controls.Add(this.otherBarButton);
             this.Controls.Add(this.progressBarAlcool);
             this.Controls.Add(this.progressBarArgent);
@@ -122,7 +133,8 @@
         private System.Windows.Forms.ProgressBar progressBarArgent;
         private System.Windows.Forms.ProgressBar progressBarAlcool;
         private System.Windows.Forms.Button otherBarButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button getMoneyButton;
+        private System.Windows.Forms.ProgressBar sexAppealBar;
     }
 }
 
