@@ -159,7 +159,7 @@
         private System.Windows.Forms.ProgressBar enjoyProgressBar;
         private System.Windows.Forms.TextBox AlcoolText;
         private System.Windows.Forms.TextBox ArgentText;
-        private System.Windows.Forms.TextBox heureTexte;
+        public System.Windows.Forms.TextBox heureTexte;
     }
 }
 

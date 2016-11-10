@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace ProjetDuBar
 {
-    public partial class barModule1 : UserControl
+    public partial class barModule1 : UserControl 
     {
+        Form1 form = new Form1();
+
         private static barModule1 _instance;
         public static barModule1 Instance
         {
@@ -25,13 +27,17 @@ namespace ProjetDuBar
         public barModule1()
         {
             InitializeComponent();
+
             drinkBeer1.Hide();
             drinkCocaButton.Hide();
             drinkBeerRinceCochon.Hide();
         }
 
-        private void drinkBeer1_Click(object sender, EventArgs e)
+        public void drinkBeer1_Click(object sender, EventArgs e)
         {
+           
+            Form1.alcool = Form1.alcool + 2;
+            form.actualiserLesVariables(form.heure, Form1.argent, Form1.alcool);
 
         }
 

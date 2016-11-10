@@ -12,9 +12,9 @@ namespace ProjetDuBar
 {
     public partial class Form1 : Form
     {
-        int argent = 50;
-        int alcool = 1;
-        TimeSpan heure = new TimeSpan(2, 14, 0);
+        public static int argent;
+        public static int alcool;
+        public TimeSpan heure = new TimeSpan(2, 14, 0);
         TimeSpan cinqMin = TimeSpan.FromMinutes(5);
         TimeSpan vingtMin = TimeSpan.FromMinutes(20);
         TimeSpan dixMin = TimeSpan.FromMinutes(10);
@@ -27,7 +27,9 @@ namespace ProjetDuBar
             
             InitializeComponent();
             this.Text = "BAR";
-            actualiserLesVariables();
+            argent = 20;
+            alcool = 1;
+            actualiserLesVariables(heure, argent, alcool);
             otherBarButton.Hide();
             getMoneyButton.Hide();
             progressBarAlcool.Hide();
@@ -37,14 +39,15 @@ namespace ProjetDuBar
             AlcoolText.Hide();
         }
 
-        private void actualiserLesVariables()
+        public void actualiserLesVariables(TimeSpan h, int ar, int al)
         {
-            heureTexte.Text = "Heure:  " + heure;
-            ArgentText.Text = "Argent: " + argent;
-            AlcoolText.Text = "Alcool: " + alcool;
-            progressBarArgent.Value = argent;
-            progressBarAlcool.Value = alcool;
-            enjoyProgressBar.Value = (argent * (alcool * 2)) / 3;
+            
+            heureTexte.Text = "Heure:  " + h;
+            ArgentText.Text = "Argent: " + ar;
+            AlcoolText.Text = "Alcool: " + al;
+            progressBarArgent.Value = ar;
+            progressBarAlcool.Value = al;
+            enjoyProgressBar.Value = (al * 2) / 3;
         }
 
 
@@ -75,7 +78,7 @@ namespace ProjetDuBar
         {
             argent = argent + 10;
             heure = heure + vingtMin;
-            actualiserLesVariables();
+            actualiserLesVariables(heure, argent, alcool);
         }
 
         //clique pour aller à l'appart café
@@ -105,12 +108,12 @@ namespace ProjetDuBar
 
         private void ArgentText_TextChanged(object sender, EventArgs e)
         {
-            actualiserLesVariables();
+            
         }
 
         private void AlcoolText_TextChanged(object sender, EventArgs e)
         {
-            actualiserLesVariables();
+            
         }
     }
 }
