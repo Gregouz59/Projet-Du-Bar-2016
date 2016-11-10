@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.enterNewGame = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
-            this.tempsPasser = new System.Windows.Forms.ProgressBar();
             this.progressBarArgent = new System.Windows.Forms.ProgressBar();
             this.progressBarAlcool = new System.Windows.Forms.ProgressBar();
             this.otherBarButton = new System.Windows.Forms.Button();
             this.getMoneyButton = new System.Windows.Forms.Button();
-            this.sexAppealBar = new System.Windows.Forms.ProgressBar();
+            this.enjoyProgressBar = new System.Windows.Forms.ProgressBar();
+            this.AlcoolText = new System.Windows.Forms.TextBox();
+            this.ArgentText = new System.Windows.Forms.TextBox();
+            this.heureTexte = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // enterNewGame
@@ -58,30 +60,25 @@
             this.panel.Size = new System.Drawing.Size(595, 426);
             this.panel.TabIndex = 1;
             // 
-            // tempsPasser
-            // 
-            this.tempsPasser.Location = new System.Drawing.Point(614, 416);
-            this.tempsPasser.Name = "tempsPasser";
-            this.tempsPasser.Size = new System.Drawing.Size(147, 23);
-            this.tempsPasser.TabIndex = 2;
-            // 
             // progressBarArgent
             // 
-            this.progressBarArgent.Location = new System.Drawing.Point(614, 358);
+            this.progressBarArgent.Location = new System.Drawing.Point(614, 303);
             this.progressBarArgent.Name = "progressBarArgent";
             this.progressBarArgent.Size = new System.Drawing.Size(147, 23);
             this.progressBarArgent.TabIndex = 3;
+            this.progressBarArgent.Click += new System.EventHandler(this.progressBarArgent_Click);
             // 
             // progressBarAlcool
             // 
-            this.progressBarAlcool.Location = new System.Drawing.Point(614, 329);
+            this.progressBarAlcool.Location = new System.Drawing.Point(614, 358);
             this.progressBarAlcool.Name = "progressBarAlcool";
             this.progressBarAlcool.Size = new System.Drawing.Size(147, 23);
             this.progressBarAlcool.TabIndex = 4;
+            this.progressBarAlcool.Click += new System.EventHandler(this.progressBarAlcool_Click);
             // 
             // otherBarButton
             // 
-            this.otherBarButton.Location = new System.Drawing.Point(614, 225);
+            this.otherBarButton.Location = new System.Drawing.Point(614, 215);
             this.otherBarButton.Name = "otherBarButton";
             this.otherBarButton.Size = new System.Drawing.Size(147, 23);
             this.otherBarButton.TabIndex = 5;
@@ -91,7 +88,7 @@
             // 
             // getMoneyButton
             // 
-            this.getMoneyButton.Location = new System.Drawing.Point(614, 254);
+            this.getMoneyButton.Location = new System.Drawing.Point(614, 244);
             this.getMoneyButton.Name = "getMoneyButton";
             this.getMoneyButton.Size = new System.Drawing.Size(147, 23);
             this.getMoneyButton.TabIndex = 6;
@@ -99,29 +96,55 @@
             this.getMoneyButton.UseVisualStyleBackColor = true;
             this.getMoneyButton.Click += new System.EventHandler(this.getMoneyButton_Click);
             // 
-            // sexAppealBar
+            // enjoyProgressBar
             // 
-            this.sexAppealBar.Location = new System.Drawing.Point(614, 387);
-            this.sexAppealBar.Name = "sexAppealBar";
-            this.sexAppealBar.Size = new System.Drawing.Size(147, 23);
-            this.sexAppealBar.TabIndex = 7;
+            this.enjoyProgressBar.Location = new System.Drawing.Point(614, 387);
+            this.enjoyProgressBar.Name = "enjoyProgressBar";
+            this.enjoyProgressBar.Size = new System.Drawing.Size(147, 23);
+            this.enjoyProgressBar.TabIndex = 7;
+            // 
+            // AlcoolText
+            // 
+            this.AlcoolText.Location = new System.Drawing.Point(614, 332);
+            this.AlcoolText.Name = "AlcoolText";
+            this.AlcoolText.Size = new System.Drawing.Size(147, 20);
+            this.AlcoolText.TabIndex = 8;
+            this.AlcoolText.TextChanged += new System.EventHandler(this.AlcoolText_TextChanged);
+            // 
+            // ArgentText
+            // 
+            this.ArgentText.Location = new System.Drawing.Point(614, 277);
+            this.ArgentText.Name = "ArgentText";
+            this.ArgentText.Size = new System.Drawing.Size(147, 20);
+            this.ArgentText.TabIndex = 9;
+            this.ArgentText.TextChanged += new System.EventHandler(this.ArgentText_TextChanged);
+            // 
+            // heureTexte
+            // 
+            this.heureTexte.Location = new System.Drawing.Point(614, 416);
+            this.heureTexte.Name = "heureTexte";
+            this.heureTexte.Size = new System.Drawing.Size(147, 20);
+            this.heureTexte.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 451);
-            this.Controls.Add(this.sexAppealBar);
+            this.Controls.Add(this.heureTexte);
+            this.Controls.Add(this.progressBarArgent);
+            this.Controls.Add(this.progressBarAlcool);
+            this.Controls.Add(this.ArgentText);
+            this.Controls.Add(this.AlcoolText);
+            this.Controls.Add(this.enjoyProgressBar);
             this.Controls.Add(this.getMoneyButton);
             this.Controls.Add(this.otherBarButton);
-            this.Controls.Add(this.progressBarAlcool);
-            this.Controls.Add(this.progressBarArgent);
-            this.Controls.Add(this.tempsPasser);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.enterNewGame);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -129,12 +152,14 @@
 
         private System.Windows.Forms.Button enterNewGame;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.ProgressBar tempsPasser;
         private System.Windows.Forms.ProgressBar progressBarArgent;
         private System.Windows.Forms.ProgressBar progressBarAlcool;
         private System.Windows.Forms.Button otherBarButton;
         private System.Windows.Forms.Button getMoneyButton;
-        private System.Windows.Forms.ProgressBar sexAppealBar;
+        private System.Windows.Forms.ProgressBar enjoyProgressBar;
+        private System.Windows.Forms.TextBox AlcoolText;
+        private System.Windows.Forms.TextBox ArgentText;
+        private System.Windows.Forms.TextBox heureTexte;
     }
 }
 

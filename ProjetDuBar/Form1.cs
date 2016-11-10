@@ -12,12 +12,42 @@ namespace ProjetDuBar
 {
     public partial class Form1 : Form
     {
+        int argent = 50;
+        int alcool = 1;
+        TimeSpan heure = new TimeSpan(2, 14, 0);
+        TimeSpan cinqMin = TimeSpan.FromMinutes(5);
+        TimeSpan vingtMin = TimeSpan.FromMinutes(20);
+        TimeSpan dixMin = TimeSpan.FromMinutes(10);
+        TimeSpan vingtCinqMin = TimeSpan.FromMinutes(25);
+
+        static Random _r = new Random();
+
         public Form1()
         {
+            
             InitializeComponent();
+            this.Text = "BAR";
+            actualiserLesVariables();
             otherBarButton.Hide();
             getMoneyButton.Hide();
+            progressBarAlcool.Hide();
+            progressBarArgent.Hide();
+            enjoyProgressBar.Hide();
+            ArgentText.Hide();
+            AlcoolText.Hide();
         }
+
+        private void actualiserLesVariables()
+        {
+            heureTexte.Text = "Heure:  " + heure;
+            ArgentText.Text = "Argent: " + argent;
+            AlcoolText.Text = "Alcool: " + alcool;
+            progressBarArgent.Value = argent;
+            progressBarAlcool.Value = alcool;
+            enjoyProgressBar.Value = (argent * (alcool * 2)) / 3;
+        }
+
+
 
         private void enterNewGame_Click(object sender, EventArgs e)
         {
@@ -30,6 +60,11 @@ namespace ProjetDuBar
                 enterNewGame.Hide();
                 otherBarButton.Show();
                 getMoneyButton.Show();
+                progressBarAlcool.Show();
+                progressBarArgent.Show();
+                enjoyProgressBar.Show();
+                ArgentText.Show();
+                AlcoolText.Show();
             }
             else
                 barModule1.Instance.BringToFront();
@@ -38,7 +73,9 @@ namespace ProjetDuBar
 
         private void getMoneyButton_Click(object sender, EventArgs e)
         {
-
+            argent = argent + 10;
+            heure = heure + vingtMin;
+            actualiserLesVariables();
         }
 
         //clique pour aller à l'appart café
@@ -54,6 +91,26 @@ namespace ProjetDuBar
             }
             else
                 barModuleAppartCafe.Instance.BringToFront();
+        }
+
+        private void progressBarAlcool_Click(object sender, EventArgs e)
+        {
+            progressBarAlcool.Maximum = 20;
+        }
+
+        private void progressBarArgent_Click(object sender, EventArgs e)
+        {
+            progressBarArgent.Maximum = 50;
+        }
+
+        private void ArgentText_TextChanged(object sender, EventArgs e)
+        {
+            actualiserLesVariables();
+        }
+
+        private void AlcoolText_TextChanged(object sender, EventArgs e)
+        {
+            actualiserLesVariables();
         }
     }
 }
