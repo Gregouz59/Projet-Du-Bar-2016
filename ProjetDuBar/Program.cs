@@ -14,6 +14,7 @@ namespace ProjetDuBar
         [STAThread]
         static void Main()
         {
+            //TEST PUSH TOM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
