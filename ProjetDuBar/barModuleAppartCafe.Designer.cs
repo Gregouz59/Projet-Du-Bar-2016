@@ -31,75 +31,157 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(barModuleAppartCafe));
             this.drinkCocaButton = new System.Windows.Forms.Button();
             this.barmanButton = new System.Windows.Forms.Button();
-            this.drinkBeerRinceCochon = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.table = new System.Windows.Forms.Button();
+            this.conso = new System.Windows.Forms.Button();
+            this.danse = new System.Windows.Forms.Button();
             this.drinkBeer1 = new System.Windows.Forms.Button();
+            this.description = new System.Windows.Forms.TextBox();
+            this.gratterAppart = new System.Windows.Forms.PictureBox();
+            this.biereAppart = new System.Windows.Forms.PictureBox();
+            this.tableAppart = new System.Windows.Forms.PictureBox();
+            this.barmanAppart = new System.Windows.Forms.PictureBox();
+            this.danseAppart = new System.Windows.Forms.PictureBox();
+            this.cocaAppart = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gratterAppart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.biereAppart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableAppart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barmanAppart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danseAppart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cocaAppart)).BeginInit();
             this.SuspendLayout();
             // 
             // drinkCocaButton
             // 
-            this.drinkCocaButton.Location = new System.Drawing.Point(29, 107);
+            this.drinkCocaButton.Location = new System.Drawing.Point(29, 63);
             this.drinkCocaButton.Name = "drinkCocaButton";
             this.drinkCocaButton.Size = new System.Drawing.Size(166, 25);
             this.drinkCocaButton.TabIndex = 21;
             this.drinkCocaButton.Text = "boire un coca (t\'es sérieux la?!)";
             this.drinkCocaButton.UseVisualStyleBackColor = true;
+            this.drinkCocaButton.Click += new System.EventHandler(this.drinkCocaButton_Click_1);
             // 
             // barmanButton
             // 
-            this.barmanButton.Location = new System.Drawing.Point(192, 192);
+            this.barmanButton.Location = new System.Drawing.Point(225, 292);
             this.barmanButton.Name = "barmanButton";
             this.barmanButton.Size = new System.Drawing.Size(124, 25);
             this.barmanButton.TabIndex = 20;
             this.barmanButton.Text = "Barman";
             this.barmanButton.UseVisualStyleBackColor = true;
+            this.barmanButton.Click += new System.EventHandler(this.barmanButton_Click);
             // 
-            // drinkBeerRinceCochon
+            // table
             // 
-            this.drinkBeerRinceCochon.Location = new System.Drawing.Point(29, 149);
-            this.drinkBeerRinceCochon.Name = "drinkBeerRinceCochon";
-            this.drinkBeerRinceCochon.Size = new System.Drawing.Size(166, 25);
-            this.drinkBeerRinceCochon.TabIndex = 19;
-            this.drinkBeerRinceCochon.Text = "boire une bière rince cochon";
-            this.drinkBeerRinceCochon.UseVisualStyleBackColor = true;
+            this.table.Location = new System.Drawing.Point(364, 292);
+            this.table.Name = "table";
+            this.table.Size = new System.Drawing.Size(159, 25);
+            this.table.TabIndex = 18;
+            this.table.Text = "s\'poser à une table t\'as vu";
+            this.table.UseVisualStyleBackColor = true;
+            this.table.Click += new System.EventHandler(this.table_Click);
             // 
-            // button4
+            // conso
             // 
-            this.button4.Location = new System.Drawing.Point(314, 239);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(159, 25);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "s\'poser à une table t\'as vu";
-            this.button4.UseVisualStyleBackColor = true;
+            this.conso.Location = new System.Drawing.Point(465, 13);
+            this.conso.Name = "conso";
+            this.conso.Size = new System.Drawing.Size(121, 25);
+            this.conso.TabIndex = 17;
+            this.conso.Text = "grater une conso";
+            this.conso.UseVisualStyleBackColor = true;
+            this.conso.Click += new System.EventHandler(this.conso_Click);
             // 
-            // button2
+            // danse
             // 
-            this.button2.Location = new System.Drawing.Point(352, 149);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 25);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "grater une conso";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(74, 239);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 25);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "danser";
-            this.button1.UseVisualStyleBackColor = true;
+            this.danse.Location = new System.Drawing.Point(29, 292);
+            this.danse.Name = "danse";
+            this.danse.Size = new System.Drawing.Size(121, 25);
+            this.danse.TabIndex = 16;
+            this.danse.Text = "danser";
+            this.danse.UseVisualStyleBackColor = true;
+            this.danse.Click += new System.EventHandler(this.danse_Click);
             // 
             // drinkBeer1
             // 
-            this.drinkBeer1.Location = new System.Drawing.Point(74, 61);
+            this.drinkBeer1.Location = new System.Drawing.Point(29, 3);
             this.drinkBeer1.Name = "drinkBeer1";
             this.drinkBeer1.Size = new System.Drawing.Size(121, 25);
             this.drinkBeer1.TabIndex = 15;
             this.drinkBeer1.Text = "boire une bière chimay";
             this.drinkBeer1.UseVisualStyleBackColor = true;
+            this.drinkBeer1.Click += new System.EventHandler(this.drinkBeer1_Click_1);
+            // 
+            // description
+            // 
+            this.description.BackColor = System.Drawing.SystemColors.Info;
+            this.description.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.description.Cursor = System.Windows.Forms.Cursors.No;
+            this.description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.description.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.description.Location = new System.Drawing.Point(0, 323);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(586, 16);
+            this.description.TabIndex = 22;
+            this.description.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // gratterAppart
+            // 
+            this.gratterAppart.Image = ((System.Drawing.Image)(resources.GetObject("gratterAppart.Image")));
+            this.gratterAppart.Location = new System.Drawing.Point(160, 44);
+            this.gratterAppart.Name = "gratterAppart";
+            this.gratterAppart.Size = new System.Drawing.Size(308, 202);
+            this.gratterAppart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gratterAppart.TabIndex = 23;
+            this.gratterAppart.TabStop = false;
+            // 
+            // biereAppart
+            // 
+            this.biereAppart.Image = ((System.Drawing.Image)(resources.GetObject("biereAppart.Image")));
+            this.biereAppart.Location = new System.Drawing.Point(160, 44);
+            this.biereAppart.Name = "biereAppart";
+            this.biereAppart.Size = new System.Drawing.Size(308, 202);
+            this.biereAppart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.biereAppart.TabIndex = 24;
+            this.biereAppart.TabStop = false;
+            // 
+            // tableAppart
+            // 
+            this.tableAppart.Image = ((System.Drawing.Image)(resources.GetObject("tableAppart.Image")));
+            this.tableAppart.Location = new System.Drawing.Point(160, 44);
+            this.tableAppart.Name = "tableAppart";
+            this.tableAppart.Size = new System.Drawing.Size(308, 202);
+            this.tableAppart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tableAppart.TabIndex = 25;
+            this.tableAppart.TabStop = false;
+            // 
+            // barmanAppart
+            // 
+            this.barmanAppart.Image = ((System.Drawing.Image)(resources.GetObject("barmanAppart.Image")));
+            this.barmanAppart.Location = new System.Drawing.Point(160, 44);
+            this.barmanAppart.Name = "barmanAppart";
+            this.barmanAppart.Size = new System.Drawing.Size(308, 202);
+            this.barmanAppart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.barmanAppart.TabIndex = 26;
+            this.barmanAppart.TabStop = false;
+            // 
+            // danseAppart
+            // 
+            this.danseAppart.Image = ((System.Drawing.Image)(resources.GetObject("danseAppart.Image")));
+            this.danseAppart.Location = new System.Drawing.Point(160, 44);
+            this.danseAppart.Name = "danseAppart";
+            this.danseAppart.Size = new System.Drawing.Size(308, 202);
+            this.danseAppart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.danseAppart.TabIndex = 27;
+            this.danseAppart.TabStop = false;
+            // 
+            // cocaAppart
+            // 
+            this.cocaAppart.Image = ((System.Drawing.Image)(resources.GetObject("cocaAppart.Image")));
+            this.cocaAppart.Location = new System.Drawing.Point(160, 44);
+            this.cocaAppart.Name = "cocaAppart";
+            this.cocaAppart.Size = new System.Drawing.Size(308, 202);
+            this.cocaAppart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cocaAppart.TabIndex = 28;
+            this.cocaAppart.TabStop = false;
             // 
             // barModuleAppartCafe
             // 
@@ -107,17 +189,30 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.cocaAppart);
+            this.Controls.Add(this.danseAppart);
+            this.Controls.Add(this.barmanAppart);
+            this.Controls.Add(this.tableAppart);
+            this.Controls.Add(this.biereAppart);
+            this.Controls.Add(this.gratterAppart);
+            this.Controls.Add(this.description);
             this.Controls.Add(this.drinkCocaButton);
             this.Controls.Add(this.barmanButton);
-            this.Controls.Add(this.drinkBeerRinceCochon);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.table);
+            this.Controls.Add(this.conso);
+            this.Controls.Add(this.danse);
             this.Controls.Add(this.drinkBeer1);
             this.Name = "barModuleAppartCafe";
-            this.Size = new System.Drawing.Size(539, 347);
+            this.Size = new System.Drawing.Size(599, 346);
             this.Load += new System.EventHandler(this.barModuleAppartCafe_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gratterAppart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.biereAppart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableAppart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barmanAppart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danseAppart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cocaAppart)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -125,10 +220,16 @@
 
         private System.Windows.Forms.Button drinkCocaButton;
         private System.Windows.Forms.Button barmanButton;
-        private System.Windows.Forms.Button drinkBeerRinceCochon;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button table;
+        private System.Windows.Forms.Button conso;
+        private System.Windows.Forms.Button danse;
         private System.Windows.Forms.Button drinkBeer1;
+        private System.Windows.Forms.TextBox description;
+        private System.Windows.Forms.PictureBox gratterAppart;
+        private System.Windows.Forms.PictureBox biereAppart;
+        private System.Windows.Forms.PictureBox tableAppart;
+        private System.Windows.Forms.PictureBox barmanAppart;
+        private System.Windows.Forms.PictureBox danseAppart;
+        private System.Windows.Forms.PictureBox cocaAppart;
     }
 }

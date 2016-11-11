@@ -190,9 +190,9 @@
             // biereZytho
             // 
             this.biereZytho.Image = ((System.Drawing.Image)(resources.GetObject("biereZytho.Image")));
-            this.biereZytho.Location = new System.Drawing.Point(201, 78);
+            this.biereZytho.Location = new System.Drawing.Point(130, 78);
             this.biereZytho.Name = "biereZytho";
-            this.biereZytho.Size = new System.Drawing.Size(187, 121);
+            this.biereZytho.Size = new System.Drawing.Size(271, 181);
             this.biereZytho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.biereZytho.TabIndex = 22;
             this.biereZytho.TabStop = false;
@@ -201,9 +201,9 @@
             // saucissonZytho
             // 
             this.saucissonZytho.Image = ((System.Drawing.Image)(resources.GetObject("saucissonZytho.Image")));
-            this.saucissonZytho.Location = new System.Drawing.Point(233, 47);
+            this.saucissonZytho.Location = new System.Drawing.Point(175, 47);
             this.saucissonZytho.Name = "saucissonZytho";
-            this.saucissonZytho.Size = new System.Drawing.Size(127, 161);
+            this.saucissonZytho.Size = new System.Drawing.Size(174, 260);
             this.saucissonZytho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.saucissonZytho.TabIndex = 23;
             this.saucissonZytho.TabStop = false;

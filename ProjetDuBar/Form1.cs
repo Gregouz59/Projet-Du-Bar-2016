@@ -101,7 +101,6 @@ namespace ProjetDuBar
                 Form1 thisForm = this;
                 description.Text = "Bienvenue au Zyhto, que veux-tu faire?";
                 enterNewGame.Hide();
-                otherBarButton.Show();
                 getMoneyButton.Show();
                 progressBarAlcool.Show();
                 progressBarArgent.Show();
