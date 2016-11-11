@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.actualiser = new System.Windows.Forms.Button();
+            this.description = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // enterNewGame
@@ -61,7 +62,7 @@
             this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel.Location = new System.Drawing.Point(13, 13);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(595, 426);
+            this.panel.Size = new System.Drawing.Size(595, 390);
             this.panel.TabIndex = 1;
             // 
             // progressBarArgent
@@ -103,6 +104,7 @@
             // enjoyProgressBar
             // 
             this.enjoyProgressBar.Location = new System.Drawing.Point(614, 380);
+            this.enjoyProgressBar.Maximum = 30;
             this.enjoyProgressBar.Name = "enjoyProgressBar";
             this.enjoyProgressBar.Size = new System.Drawing.Size(147, 23);
             this.enjoyProgressBar.TabIndex = 7;
@@ -159,7 +161,7 @@
             // 
             // actualiser
             // 
-            this.actualiser.Location = new System.Drawing.Point(685, 13);
+            this.actualiser.Location = new System.Drawing.Point(689, 12);
             this.actualiser.Name = "actualiser";
             this.actualiser.Size = new System.Drawing.Size(75, 23);
             this.actualiser.TabIndex = 12;
@@ -167,11 +169,26 @@
             this.actualiser.UseVisualStyleBackColor = true;
             this.actualiser.Click += new System.EventHandler(this.actualiser_Click);
             // 
+            // description
+            // 
+            this.description.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.description.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.description.Cursor = System.Windows.Forms.Cursors.No;
+            this.description.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.description.Location = new System.Drawing.Point(13, 416);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(595, 17);
+            this.description.TabIndex = 13;
+            this.description.Text = "C\'est mercredi! Va au zytho !";
+            this.description.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.description.TextChanged += new System.EventHandler(this.description_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 451);
+            this.Controls.Add(this.description);
             this.Controls.Add(this.actualiser);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -209,6 +226,7 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button actualiser;
+        private System.Windows.Forms.TextBox description;
     }
 }
 

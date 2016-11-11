@@ -16,14 +16,17 @@ namespace ProjetDuBar
         public static int alcool;
         public static int enjoy;
         public static Form1 thisForm ;
-        public static TimeSpan heure = new TimeSpan(2, 14, 0);
+        public static TimeSpan heure = new TimeSpan(17, 30, 0);
+        public static TimeSpan timeToGo = new TimeSpan(19, 30, 0);
         public static TimeSpan cinqMin = TimeSpan.FromMinutes(5);
+        public static TimeSpan quinzeMin = TimeSpan.FromMinutes(15);
         public static TimeSpan vingtMin = TimeSpan.FromMinutes(20);
         public static TimeSpan dixMin = TimeSpan.FromMinutes(10);
         public static TimeSpan vingtCinqMin = TimeSpan.FromMinutes(25);
 
 
-        static Random _r = new Random();
+
+        public static Random _r = new Random();
 
         public Form1()
         {
@@ -33,7 +36,7 @@ namespace ProjetDuBar
             Form1 thisForm = this;
             argent = 20;
             alcool = 1;
-            enjoy = 1;
+            enjoy = 10;
             actualiserLesVariables(heure, argent, alcool);
             otherBarButton.Hide();
             getMoneyButton.Hide();
@@ -95,6 +98,7 @@ namespace ProjetDuBar
                 panel.Controls.Add(barModule1.Instance);
                 barModule1.Instance.Dock = DockStyle.Fill;
                 barModule1.Instance.BringToFront();
+                description.Text = "Bienvenue au Zyhto, que veux-tu faire?";
                 enterNewGame.Hide();
                 otherBarButton.Show();
                 getMoneyButton.Show();
@@ -116,6 +120,8 @@ namespace ProjetDuBar
             argent = argent + 10;
             enjoy = enjoy - 1;
             heure = heure + vingtMin;
+            description.Text = "Tu viens d'aller retirer 10e ! ";
+            checkTime();
             actualiserLesVariables(heure, argent, alcool);
         }
 
@@ -127,6 +133,7 @@ namespace ProjetDuBar
                 panel.Controls.Add(barModuleAppartCafe.Instance);
                 barModuleAppartCafe.Instance.Dock = DockStyle.Fill;
                 barModuleAppartCafe.Instance.BringToFront();
+                description.Text = "Bienvenue à l'appart , que veux-tu faire?";
                 enterNewGame.Hide();
                 otherBarButton.Hide();
             }
@@ -154,22 +161,7 @@ namespace ProjetDuBar
             
         }
 
-        private void gratterConso_Click(object sender, EventArgs e)
-        {
-            //Demander de l'argent
-            int gratteConso = _r.Next(5);
-            if (gratteConso == 1)
-            {
-                alcool = alcool + 2;
-                enjoy = enjoy + 3;
-                actualiserLesVariables(heure, argent, alcool);
-            }
 
-            //Temps perdu a gratter
-            heure = heure.Add(cinqMin);
-            enjoy = enjoy - 1;
-            actualiserLesVariables(heure, argent, alcool);
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -186,5 +178,21 @@ namespace ProjetDuBar
             actualiserLesVariables(heure, argent, alcool);
         }
 
+        private void description_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void checkTime()
+        {
+            if(heure >= timeToGo)
+            {
+                object sender = null;
+                EventArgs e = null;
+                description.Text = "19h30 , ON FERME ! ";
+                otherBarButton_Click(sender, e);
+
+            }
+        }
     }
 }
