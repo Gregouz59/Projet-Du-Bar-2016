@@ -40,6 +40,7 @@ namespace ProjetDuBar
         {
             drinkBeer1.Show();
             drinkCocaButton.Show();
+            Jagger.Show();
             hideAllPictures();
             barmanAppart.Show();
             hideButton();
@@ -53,6 +54,7 @@ namespace ProjetDuBar
             danse.Hide();
             conso.Hide();
             table.Hide();
+            chiner.Hide();
         }
 
         public void displayButton()
@@ -60,6 +62,7 @@ namespace ProjetDuBar
             danse.Show();
             conso.Show();
             table.Show();
+            chiner.Show();
         }
 
      
@@ -174,6 +177,24 @@ namespace ProjetDuBar
             displayButton();
             barmanButton.Show();
             description.Text = "Peite caisse!";
+         }
+
+
+        private void Jagger_Click(object sender, EventArgs e)
+        {
+            //boire un jagger
+            Form1.argent -= 5;
+            Form1.heure += Form1.unMin;
+            Form1.alcool += 3;
+            Form1.enjoy += 4;
+            drinkBeer1.Hide();
+            drinkCocaButton.Hide();
+            hideAllPictures();
+          //  cocaAppart.Show();   AFFICHEER UNE PHOTO D UN JAGGERBOMB 
+            displayButton();
+            barmanButton.Show();
+            Jagger.Hide();
+            description.Text = "Ca attaque fort !!!";
         }
 
         private void chiner_Click(object sender, EventArgs e)
@@ -189,6 +210,7 @@ namespace ProjetDuBar
                 description.Text = "tu t'attendais à qui t'as pas de tune...";
             }
         }
+
     }
 
 

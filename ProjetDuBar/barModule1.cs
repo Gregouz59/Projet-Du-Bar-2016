@@ -36,7 +36,7 @@ namespace ProjetDuBar
 
         public void drinkBeer1_Click(object sender, EventArgs e)
         {
-
+            //boire une bière
             hideAllPictures();
             biereZytho.Show();
             Form1.alcool +=  2;
@@ -50,11 +50,7 @@ namespace ProjetDuBar
             displayButton();
             description.Text = "BIERE !";
             barmanButton.Show();
-            
-
-
-
-        }
+                        }
 
 
         //barmanButton
@@ -74,7 +70,7 @@ namespace ProjetDuBar
         {
          //boire un coca
             Form1.argent -=  2;
-            Form1.heure += Form1.cinqMin;
+            Form1.heure += Form1.dixMin;
             drinkBeer1.Hide();
             drinkBeerRinceCochon.Hide();
             drinkCocaButton.Hide();
@@ -105,6 +101,7 @@ namespace ProjetDuBar
             Form1.argent -= 3;
             //Form1.heure = Form1.heure + Form1.quinzeMin;
             Form1.alcool -= 1;
+            Form1.heure += Form1.quinzeMin;
             drinkBeer1.Hide();
             drinkBeerRinceCochon.Hide();
             drinkCocaButton.Hide();
@@ -118,6 +115,7 @@ namespace ProjetDuBar
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //se poser à une table
             hideAllPictures();
             tableZytho.Show();
             if (isBeer)
@@ -166,6 +164,7 @@ namespace ProjetDuBar
             Form1.enjoy += 3;
             description.Text = "T'enflammes le dance floor !";
             Form1.heure += Form1.quinzeMin;
+            Form1.alcool -= 1;
         }
 
         private void biereZytho_Click(object sender, EventArgs e)

@@ -23,6 +23,7 @@ namespace ProjetDuBar
         public static TimeSpan vingtMin = TimeSpan.FromMinutes(20);
         public static TimeSpan dixMin = TimeSpan.FromMinutes(10);
         public static TimeSpan vingtCinqMin = TimeSpan.FromMinutes(25);
+        public static TimeSpan unMin = TimeSpan.FromMinutes(1);
 
 
 
@@ -59,36 +60,34 @@ namespace ProjetDuBar
             AlcoolText.Text = "Alcool: " + al;
             textBox1.Text = "Enjaille: " + enjoy;
  
-            if(ar <= 0)
-            {
+            if(ar <= 0) {
                 label2.Show();
             }
-            else
-            {
+            else {
                 progressBarArgent.Value = ar;
             }
 
-            if (al <= 0)
-            {
+            if (al <= 0) {
                 label2.Show();
             }
-            else
-            {
+            else if(al >= progressBarAlcool.Maximum){
+                label2.Show();
+                progressBarAlcool.Value = progressBarAlcool.Maximum;
+            }
+              else  {
                 progressBarAlcool.Value = al;
             }
-            if (enjoy <= 0)
-            {
+
+            if (enjoy <= 0){
                 label2.Show();
             }
             else if(enjoy>= enjoyProgressBar.Maximum){
                 label1.Show();
                 enjoyProgressBar.Value = enjoyProgressBar.Maximum;
             }
-            else
-            {
+                else  {
                 enjoyProgressBar.Value = enjoy;
-            }
-
+                }
 
         }
 
