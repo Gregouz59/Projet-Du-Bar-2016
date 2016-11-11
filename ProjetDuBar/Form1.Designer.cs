@@ -39,6 +39,9 @@
             this.AlcoolText = new System.Windows.Forms.TextBox();
             this.ArgentText = new System.Windows.Forms.TextBox();
             this.heureTexte = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // enterNewGame
@@ -62,7 +65,7 @@
             // 
             // progressBarArgent
             // 
-            this.progressBarArgent.Location = new System.Drawing.Point(614, 303);
+            this.progressBarArgent.Location = new System.Drawing.Point(614, 270);
             this.progressBarArgent.Name = "progressBarArgent";
             this.progressBarArgent.Size = new System.Drawing.Size(147, 23);
             this.progressBarArgent.TabIndex = 3;
@@ -70,7 +73,7 @@
             // 
             // progressBarAlcool
             // 
-            this.progressBarAlcool.Location = new System.Drawing.Point(614, 358);
+            this.progressBarAlcool.Location = new System.Drawing.Point(614, 325);
             this.progressBarAlcool.Name = "progressBarAlcool";
             this.progressBarAlcool.Size = new System.Drawing.Size(147, 23);
             this.progressBarAlcool.TabIndex = 4;
@@ -78,7 +81,7 @@
             // 
             // otherBarButton
             // 
-            this.otherBarButton.Location = new System.Drawing.Point(614, 215);
+            this.otherBarButton.Location = new System.Drawing.Point(614, 186);
             this.otherBarButton.Name = "otherBarButton";
             this.otherBarButton.Size = new System.Drawing.Size(147, 23);
             this.otherBarButton.TabIndex = 5;
@@ -88,7 +91,7 @@
             // 
             // getMoneyButton
             // 
-            this.getMoneyButton.Location = new System.Drawing.Point(614, 244);
+            this.getMoneyButton.Location = new System.Drawing.Point(614, 215);
             this.getMoneyButton.Name = "getMoneyButton";
             this.getMoneyButton.Size = new System.Drawing.Size(147, 23);
             this.getMoneyButton.TabIndex = 6;
@@ -98,14 +101,14 @@
             // 
             // enjoyProgressBar
             // 
-            this.enjoyProgressBar.Location = new System.Drawing.Point(614, 387);
+            this.enjoyProgressBar.Location = new System.Drawing.Point(614, 380);
             this.enjoyProgressBar.Name = "enjoyProgressBar";
             this.enjoyProgressBar.Size = new System.Drawing.Size(147, 23);
             this.enjoyProgressBar.TabIndex = 7;
             // 
             // AlcoolText
             // 
-            this.AlcoolText.Location = new System.Drawing.Point(614, 332);
+            this.AlcoolText.Location = new System.Drawing.Point(614, 299);
             this.AlcoolText.Name = "AlcoolText";
             this.AlcoolText.Size = new System.Drawing.Size(147, 20);
             this.AlcoolText.TabIndex = 8;
@@ -113,7 +116,7 @@
             // 
             // ArgentText
             // 
-            this.ArgentText.Location = new System.Drawing.Point(614, 277);
+            this.ArgentText.Location = new System.Drawing.Point(614, 244);
             this.ArgentText.Name = "ArgentText";
             this.ArgentText.Size = new System.Drawing.Size(147, 20);
             this.ArgentText.TabIndex = 9;
@@ -126,12 +129,42 @@
             this.heureTexte.Size = new System.Drawing.Size(147, 20);
             this.heureTexte.TabIndex = 10;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(614, 143);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "YOU WIN !";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(686, 143);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "YOU LOOSE !";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(614, 354);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(147, 20);
+            this.textBox1.TabIndex = 11;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 451);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.heureTexte);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBarArgent);
             this.Controls.Add(this.progressBarAlcool);
             this.Controls.Add(this.ArgentText);
@@ -160,6 +193,9 @@
         private System.Windows.Forms.TextBox AlcoolText;
         private System.Windows.Forms.TextBox ArgentText;
         public System.Windows.Forms.TextBox heureTexte;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }
 

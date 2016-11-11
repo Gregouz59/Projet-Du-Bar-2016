@@ -37,6 +37,7 @@ namespace ProjetDuBar
         {
            
             Form1.alcool = Form1.alcool + 2;
+            Form1.enjoy = Form1.enjoy + 3;
             Form1.argent = Form1.argent - 5;
 
            // form.actualiserLesVariables(form.heure, Form1.argent, Form1.alcool);
