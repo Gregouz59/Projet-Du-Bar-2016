@@ -42,7 +42,11 @@ namespace ProjetDuBar
             Form1.argent -= 5;
             Form1.heure += Form1.vingtMin;
             isBeer = true;
-            Form1.actualiser_Click(sender, e);
+            drinkBeer1.Hide();
+            drinkBeerRinceCochon.Hide();
+            drinkCocaButton.Hide();
+            barmanButton.Show();
+
 
         }
 
@@ -67,7 +71,7 @@ namespace ProjetDuBar
         {
             //prendre un saucisson
             Form1.argent = Form1.argent - 3;
-            Form1.heure = Form1.heure + Form1.quinzeMin;
+            //Form1.heure = Form1.heure + Form1.quinzeMin;
             Form1.alcool = Form1.alcool - 1;
         }
 

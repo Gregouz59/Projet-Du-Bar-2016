@@ -22,6 +22,7 @@ namespace ProjetDuBar
         public static TimeSpan dixMin = TimeSpan.FromMinutes(10);
         public static TimeSpan vingtCinqMin = TimeSpan.FromMinutes(25);
 
+
         static Random _r = new Random();
 
         public Form1()
@@ -180,10 +181,10 @@ namespace ProjetDuBar
 
         }
 
-        protected static void actualiser_Click(object sender, EventArgs e)
+        private void actualiser_Click(object sender, EventArgs e)
         {
-            thisForm.actualiserLesVariables(heure, argent, alcool);
-
+            actualiserLesVariables(heure, argent, alcool);
         }
+
     }
 }
