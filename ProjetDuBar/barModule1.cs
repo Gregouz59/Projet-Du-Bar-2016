@@ -37,9 +37,12 @@ namespace ProjetDuBar
         {
            
             Form1.alcool = Form1.alcool + 2;
-            //////form.actualiserLesVariables(form.heure, Form1.argent, Form1.alcool);
+            Form1.argent = Form1.argent - 5;
+
+           // form.actualiserLesVariables(form.heure, Form1.argent, Form1.alcool);
 
         }
+
 
         //barmanButton
         private void button6_Click(object sender, EventArgs e)
@@ -64,5 +67,6 @@ namespace ProjetDuBar
         {
             
         }
+
     }
 }
