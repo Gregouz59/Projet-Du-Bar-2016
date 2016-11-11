@@ -37,6 +37,7 @@ namespace ProjetDuBar
         {
            //boire une biere
             Form1.alcool = Form1.alcool + 2;
+            Form1.enjoy = Form1.enjoy + 3;
             Form1.argent = Form1.argent - 5;
             Form1.heure = Form1.heure + Form1.vingtMin;
 

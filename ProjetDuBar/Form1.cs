@@ -30,14 +30,18 @@ namespace ProjetDuBar
             this.Text = "BAR";
             argent = 20;
             alcool = 1;
+            enjoy = 1;
             actualiserLesVariables(heure, argent, alcool);
             otherBarButton.Hide();
             getMoneyButton.Hide();
             progressBarAlcool.Hide();
             progressBarArgent.Hide();
             enjoyProgressBar.Hide();
+            label1.Hide();
+            label2.Hide();
             ArgentText.Hide();
             AlcoolText.Hide();
+            textBox1.Hide();
         }
 
         public void actualiserLesVariables(TimeSpan h, int ar, int al)
@@ -46,9 +50,35 @@ namespace ProjetDuBar
             heureTexte.Text = "Heure:  " + h;
             ArgentText.Text = "Argent: " + ar;
             AlcoolText.Text = "Alcool: " + al;
-            progressBarArgent.Value = ar;
-            progressBarAlcool.Value = al;
-            enjoyProgressBar.Value = (al * 2) / 3;
+            textBox1.Text = "Enjaille: " + enjoy;
+ 
+            if(ar <= 0)
+            {
+                label2.Show();
+            }
+            else
+            {
+                progressBarArgent.Value = ar;
+            }
+
+            if (al <= 0)
+            {
+                label2.Show();
+            }
+            else
+            {
+                progressBarAlcool.Value = al;
+            }
+            if (enjoy <= 0)
+            {
+                label2.Show();
+            }
+            else
+            {
+                enjoyProgressBar.Value = enjoy;
+            }
+
+
         }
 
 
@@ -69,6 +99,7 @@ namespace ProjetDuBar
                 enjoyProgressBar.Show();
                 ArgentText.Show();
                 AlcoolText.Show();
+                textBox1.Show();
             }
             else
                 barModule1.Instance.BringToFront();
@@ -78,6 +109,7 @@ namespace ProjetDuBar
         private void getMoneyButton_Click(object sender, EventArgs e)
         {
             argent = argent + 10;
+            enjoy = enjoy - 1;
             heure = heure + vingtMin;
             actualiserLesVariables(heure, argent, alcool);
         }
@@ -115,6 +147,33 @@ namespace ProjetDuBar
         private void AlcoolText_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void gratterConso_Click(object sender, EventArgs e)
+        {
+            //Demander de l'argent
+            int gratteConso = _r.Next(5);
+            if (gratteConso == 1)
+            {
+                alcool = alcool + 2;
+                enjoy = enjoy + 3;
+                actualiserLesVariables(heure, argent, alcool);
+            }
+
+            //Temps perdu a gratter
+            heure = heure.Add(cinqMin);
+            enjoy = enjoy - 1;
+            actualiserLesVariables(heure, argent, alcool);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

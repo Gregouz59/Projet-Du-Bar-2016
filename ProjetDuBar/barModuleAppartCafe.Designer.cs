@@ -116,6 +116,7 @@
             this.Controls.Add(this.drinkBeer1);
             this.Name = "barModuleAppartCafe";
             this.Size = new System.Drawing.Size(539, 347);
+            this.Load += new System.EventHandler(this.barModuleAppartCafe_Load);
             this.ResumeLayout(false);
 
         }

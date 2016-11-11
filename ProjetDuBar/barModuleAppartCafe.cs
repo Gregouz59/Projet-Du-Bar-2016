@@ -26,5 +26,10 @@ namespace ProjetDuBar
         {
             InitializeComponent();
         }
+
+        private void barModuleAppartCafe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
