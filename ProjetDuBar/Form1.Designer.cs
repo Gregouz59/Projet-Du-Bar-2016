@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.actualiser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // enterNewGame
@@ -156,11 +157,22 @@
             this.textBox1.TabIndex = 11;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // actualiser
+            // 
+            this.actualiser.Location = new System.Drawing.Point(685, 13);
+            this.actualiser.Name = "actualiser";
+            this.actualiser.Size = new System.Drawing.Size(75, 23);
+            this.actualiser.TabIndex = 12;
+            this.actualiser.Text = "Actualiser";
+            this.actualiser.UseVisualStyleBackColor = true;
+            this.actualiser.Click += new System.EventHandler(this.actualiser_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 451);
+            this.Controls.Add(this.actualiser);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.heureTexte);
@@ -196,6 +208,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button actualiser;
     }
 }
 

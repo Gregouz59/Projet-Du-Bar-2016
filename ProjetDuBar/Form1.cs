@@ -15,11 +15,12 @@ namespace ProjetDuBar
         public static int argent;
         public static int alcool;
         public static int enjoy;
-        public TimeSpan heure = new TimeSpan(2, 14, 0);
-        TimeSpan cinqMin = TimeSpan.FromMinutes(5);
-        TimeSpan vingtMin = TimeSpan.FromMinutes(20);
-        TimeSpan dixMin = TimeSpan.FromMinutes(10);
-        TimeSpan vingtCinqMin = TimeSpan.FromMinutes(25);
+        public static Form1 thisForm ;
+        public static TimeSpan heure = new TimeSpan(2, 14, 0);
+        public static TimeSpan cinqMin = TimeSpan.FromMinutes(5);
+        public static TimeSpan vingtMin = TimeSpan.FromMinutes(20);
+        public static TimeSpan dixMin = TimeSpan.FromMinutes(10);
+        public static TimeSpan vingtCinqMin = TimeSpan.FromMinutes(25);
 
         static Random _r = new Random();
 
@@ -28,6 +29,7 @@ namespace ProjetDuBar
             
             InitializeComponent();
             this.Text = "BAR";
+            Form1 thisForm = this;
             argent = 20;
             alcool = 1;
             enjoy = 1;
@@ -40,6 +42,7 @@ namespace ProjetDuBar
             label1.Hide();
             label2.Hide();
             ArgentText.Hide();
+            actualiser.Hide();
             AlcoolText.Hide();
             textBox1.Hide();
         }
@@ -99,6 +102,7 @@ namespace ProjetDuBar
                 enjoyProgressBar.Show();
                 ArgentText.Show();
                 AlcoolText.Show();
+                actualiser.Show();
                 textBox1.Show();
             }
             else
@@ -173,6 +177,12 @@ namespace ProjetDuBar
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        protected static void actualiser_Click(object sender, EventArgs e)
+        {
+            thisForm.actualiserLesVariables(heure, argent, alcool);
 
         }
     }
