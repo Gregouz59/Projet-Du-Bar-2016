@@ -14,11 +14,12 @@ namespace ProjetDuBar
     {
         public static int argent;
         public static int alcool;
-        public TimeSpan heure = new TimeSpan(2, 14, 0);
-        TimeSpan cinqMin = TimeSpan.FromMinutes(5);
-        TimeSpan vingtMin = TimeSpan.FromMinutes(20);
-        TimeSpan dixMin = TimeSpan.FromMinutes(10);
-        TimeSpan vingtCinqMin = TimeSpan.FromMinutes(25);
+        public static TimeSpan heure = new TimeSpan(2, 14, 0);
+        public static TimeSpan cinqMin = TimeSpan.FromMinutes(5);
+        public static TimeSpan vingtMin = TimeSpan.FromMinutes(20);
+        public static TimeSpan dixMin = TimeSpan.FromMinutes(10);
+        public static TimeSpan vingtCinqMin = TimeSpan.FromMinutes(25);
+        public static TimeSpan quinzeMin = TimeSpan.FromMinutes(15);
 
         static Random _r = new Random();
 
