@@ -58,12 +58,17 @@ namespace ProjetDuBar
 
         private void drinkCocaButton_Click(object sender, EventArgs e)
         {
-            
+         //boire un coca
+            Form1.argent = Form1.argent - 2;
+            Form1.heure = Form1.heure + Form1.cinqMin;
         }
 
         private void drinkBeerRinceCochon_Click(object sender, EventArgs e)
         {
-
+            //prendre un saucisson
+            Form1.argent = Form1.argent - 3;
+            Form1.heure = Form1.heure + Form1.quinzeMin;
+            Form1.alcool = Form1.alcool - 1;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -76,7 +81,7 @@ namespace ProjetDuBar
             if (isBeer)
             {
                 Form1.enjoy += 3;
-            }
+        }
             else
             {
                 Form1.enjoy -= 5;
@@ -84,6 +89,6 @@ namespace ProjetDuBar
             isBeer = false;
             Form1.heure += Form1.dixMin;
 
-        }
     }
+}
 }
