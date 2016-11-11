@@ -33,7 +33,7 @@ namespace ProjetDuBar
             
             InitializeComponent();
             this.Text = "BAR";
-            Form1 thisForm = this;
+            
             argent = 20;
             alcool = 1;
             enjoy = 10;
@@ -98,6 +98,7 @@ namespace ProjetDuBar
                 panel.Controls.Add(barModule1.Instance);
                 barModule1.Instance.Dock = DockStyle.Fill;
                 barModule1.Instance.BringToFront();
+                Form1 thisForm = this;
                 description.Text = "Bienvenue au Zyhto, que veux-tu faire?";
                 enterNewGame.Hide();
                 otherBarButton.Show();
