@@ -92,6 +92,8 @@ namespace ProjetDuBar
             tableAppart.Hide();
             gratterAppart.Hide();
             danseAppart.Hide();
+            chinerMoche.Hide();
+            chinerRiche.Hide();
             
         }
 
@@ -172,6 +174,20 @@ namespace ProjetDuBar
             displayButton();
             barmanButton.Show();
             description.Text = "Peite caisse!";
+        }
+
+        private void chiner_Click(object sender, EventArgs e)
+        {
+            hideAllPictures();
+            if (Form1.argent > 20)
+            {
+                chinerRiche.Show();
+                description.Text = "ouech bill gates";
+            }
+            else {
+                chinerMoche.Show();
+                description.Text = "tu t'attendais à qui t'as pas de tune...";
+            }
         }
     }
 

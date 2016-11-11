@@ -42,12 +42,17 @@
             this.barmanAppart = new System.Windows.Forms.PictureBox();
             this.danseAppart = new System.Windows.Forms.PictureBox();
             this.cocaAppart = new System.Windows.Forms.PictureBox();
+            this.chiner = new System.Windows.Forms.Button();
+            this.chinerMoche = new System.Windows.Forms.PictureBox();
+            this.chinerRiche = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gratterAppart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.biereAppart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableAppart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barmanAppart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.danseAppart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cocaAppart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chinerMoche)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chinerRiche)).BeginInit();
             this.SuspendLayout();
             // 
             // drinkCocaButton
@@ -183,12 +188,45 @@
             this.cocaAppart.TabIndex = 28;
             this.cocaAppart.TabStop = false;
             // 
+            // chiner
+            // 
+            this.chiner.Location = new System.Drawing.Point(500, 250);
+            this.chiner.Name = "chiner";
+            this.chiner.Size = new System.Drawing.Size(75, 23);
+            this.chiner.TabIndex = 29;
+            this.chiner.Text = "CHINER !!!";
+            this.chiner.UseVisualStyleBackColor = true;
+            this.chiner.Click += new System.EventHandler(this.chiner_Click);
+            // 
+            // chinerMoche
+            // 
+            this.chinerMoche.Image = ((System.Drawing.Image)(resources.GetObject("chinerMoche.Image")));
+            this.chinerMoche.Location = new System.Drawing.Point(160, 44);
+            this.chinerMoche.Name = "chinerMoche";
+            this.chinerMoche.Size = new System.Drawing.Size(308, 202);
+            this.chinerMoche.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.chinerMoche.TabIndex = 30;
+            this.chinerMoche.TabStop = false;
+            // 
+            // chinerRiche
+            // 
+            this.chinerRiche.Image = ((System.Drawing.Image)(resources.GetObject("chinerRiche.Image")));
+            this.chinerRiche.Location = new System.Drawing.Point(160, 44);
+            this.chinerRiche.Name = "chinerRiche";
+            this.chinerRiche.Size = new System.Drawing.Size(308, 202);
+            this.chinerRiche.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.chinerRiche.TabIndex = 31;
+            this.chinerRiche.TabStop = false;
+            // 
             // barModuleAppartCafe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.chinerRiche);
+            this.Controls.Add(this.chinerMoche);
+            this.Controls.Add(this.chiner);
             this.Controls.Add(this.cocaAppart);
             this.Controls.Add(this.danseAppart);
             this.Controls.Add(this.barmanAppart);
@@ -211,6 +249,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.barmanAppart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.danseAppart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cocaAppart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chinerMoche)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chinerRiche)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +271,8 @@
         private System.Windows.Forms.PictureBox barmanAppart;
         private System.Windows.Forms.PictureBox danseAppart;
         private System.Windows.Forms.PictureBox cocaAppart;
+        private System.Windows.Forms.Button chiner;
+        private System.Windows.Forms.PictureBox chinerMoche;
+        private System.Windows.Forms.PictureBox chinerRiche;
     }
 }

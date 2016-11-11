@@ -80,6 +80,10 @@ namespace ProjetDuBar
             {
                 label2.Show();
             }
+            else if(enjoy>= enjoyProgressBar.Maximum){
+                label1.Show();
+                enjoyProgressBar.Value = enjoyProgressBar.Maximum;
+            }
             else
             {
                 enjoyProgressBar.Value = enjoy;
