@@ -66,6 +66,7 @@
             // progressBarArgent
             // 
             this.progressBarArgent.Location = new System.Drawing.Point(614, 270);
+            this.progressBarArgent.Maximum = 1000;
             this.progressBarArgent.Name = "progressBarArgent";
             this.progressBarArgent.Size = new System.Drawing.Size(147, 23);
             this.progressBarArgent.TabIndex = 3;
