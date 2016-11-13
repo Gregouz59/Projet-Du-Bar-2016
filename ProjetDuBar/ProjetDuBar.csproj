@@ -67,6 +67,12 @@
     <Compile Include="barModule1.Designer.cs">
       <DependentUpon>barModule1.cs</DependentUpon>
     </Compile>
+    <Compile Include="finalModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="finalModule.Designer.cs">
+      <DependentUpon>finalModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="barModuleAppartCafe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="barModule1.resx">
       <DependentUpon>barModule1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="finalModule.resx">
+      <DependentUpon>finalModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="barModuleAppartCafe.resx">
       <DependentUpon>barModuleAppartCafe.cs</DependentUpon>

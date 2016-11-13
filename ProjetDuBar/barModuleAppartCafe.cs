@@ -38,10 +38,10 @@ namespace ProjetDuBar
 
         private void barmanButton_Click(object sender, EventArgs e)
         {
+            hideAllPictures();
             drinkBeer1.Show();
             drinkCocaButton.Show();
             Jagger.Show();
-            hideAllPictures();
             barmanAppart.Show();
             hideButton();
             description.Text = "Que veux-tu commander? ";
@@ -90,6 +90,10 @@ namespace ProjetDuBar
         public void hideAllPictures()
         {
             cocaAppart.Hide();
+            Jagger.Hide();
+            drinkBeer1.Hide();
+            jaggerPicture.Hide();
+            drinkCocaButton.Hide();
             barmanAppart.Hide();
             biereAppart.Hide();
             tableAppart.Hide();
@@ -190,6 +194,7 @@ namespace ProjetDuBar
             drinkBeer1.Hide();
             drinkCocaButton.Hide();
             hideAllPictures();
+            jaggerPicture.Show();
           //  cocaAppart.Show();   AFFICHEER UNE PHOTO D UN JAGGERBOMB 
             displayButton();
             barmanButton.Show();
@@ -200,14 +205,22 @@ namespace ProjetDuBar
         private void chiner_Click(object sender, EventArgs e)
         {
             hideAllPictures();
-            if (Form1.argent > 20)
+            if (Form1.argent > 30)
             {
                 chinerRiche.Show();
-                description.Text = "ouech bill gates";
+                description.Text = "Mais dis moi, c'est un porte-monnaie bien remplis!";
+                Form1.argent -= 15;
+                Form1.heure += Form1.quinzeMin;
+                Form1.alcool += 5;
+                Form1.enjoy += 10;
             }
             else {
                 chinerMoche.Show();
-                description.Text = "tu t'attendais à qui t'as pas de tune...";
+                description.Text = "tu t'attendais à qui? T'as pas de tune...";
+                Form1.heure += Form1.quinzeMin;
+                Form1.alcool += 4;
+                Form1.argent -= 5;
+                Form1.enjoy -= 5 ;
             }
         }
 

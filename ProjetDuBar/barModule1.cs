@@ -56,6 +56,7 @@ namespace ProjetDuBar
         //barmanButton
         private void button6_Click(object sender, EventArgs e)
         {
+            Form1.heure += Form1.cinqMin;
             drinkBeer1.Show();
             drinkCocaButton.Show();
             drinkBeerRinceCochon.Show();
@@ -130,7 +131,7 @@ namespace ProjetDuBar
             }
 
             isBeer = false;
-            Form1.heure += Form1.dixMin;
+            Form1.heure += Form1.quinzeMin;
 
     }
 
@@ -139,7 +140,7 @@ namespace ProjetDuBar
             hideAllPictures();
             graterZytho.Show();
             //Demander de l'argent
-            int gratteConso = Form1._r.Next(5);
+            int gratteConso = Form1._r.Next(3);
             if (gratteConso == 1)
             {
                 Form1.alcool += 2;
@@ -148,6 +149,7 @@ namespace ProjetDuBar
             }
             else
             {
+                Form1.enjoy -= 2;
                 description.Text = "Dommage mais tes potes sont à sec !";
             }
 
@@ -163,7 +165,7 @@ namespace ProjetDuBar
             dansePicZytho.Show();
             Form1.enjoy += 3;
             description.Text = "T'enflammes le dance floor !";
-            Form1.heure += Form1.quinzeMin;
+            Form1.heure += Form1.vingtMin;
             Form1.alcool -= 1;
         }
 

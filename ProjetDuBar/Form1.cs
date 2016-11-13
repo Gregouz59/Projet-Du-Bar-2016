@@ -44,8 +44,6 @@ namespace ProjetDuBar
             progressBarAlcool.Hide();
             progressBarArgent.Hide();
             enjoyProgressBar.Hide();
-            label1.Hide();
-            label2.Hide();
             ArgentText.Hide();
             actualiser.Hide();
             AlcoolText.Hide();
@@ -59,30 +57,49 @@ namespace ProjetDuBar
             ArgentText.Text = "Argent: " + ar;
             AlcoolText.Text = "Alcool: " + al;
             textBox1.Text = "Enjaille: " + enjoy;
- 
-            if(ar <= 0) {
-                label2.Show();
+
+            //Conditions sur l'argent, défaite si <=0
+            if (ar <= 0)
+            {
+                if (!panel.Controls.Contains(finalModule.Instance))
+                {
+                    description.Text = "Rentre chez toi, t'es fauché pour ce soir...";
+                    panel.Controls.Add(finalModule.Instance); 
+                    finalModule.Instance.Dock = DockStyle.Fill;
+                    finalModule.Instance.BringToFront();
+                }
             }
             else {
                 progressBarArgent.Value = ar;
             }
 
+            //Condition sur l'alcool, défaite si max
             if (al <= 0) {
-                label2.Show();
+                
             }
             else if(al >= progressBarAlcool.Maximum){
-                label2.Show();
+                description.Text = "Rentre chez toi, t'es trop bourré pour ce soir...";
+                panel.Controls.Add(finalModule.Instance);
+                finalModule.Instance.Dock = DockStyle.Fill;
+                finalModule.Instance.BringToFront();
                 progressBarAlcool.Value = progressBarAlcool.Maximum;
             }
               else  {
                 progressBarAlcool.Value = al;
             }
 
+            //Condition sur l'enjaille, victoire si max
             if (enjoy <= 0){
-                label2.Show();
+                description.Text = "Tu t'ai fais trop chier... rentre chez toi!";
+                panel.Controls.Add(finalModule.Instance);
+                finalModule.Instance.Dock = DockStyle.Fill;
+                finalModule.Instance.BringToFront();
             }
             else if(enjoy>= enjoyProgressBar.Maximum){
-                label1.Show();
+                description.Text = "Tu as passé une putain de soirée! BRAVO !";
+                panel.Controls.Add(finalModule.Instance);
+                finalModule.Instance.Dock = DockStyle.Fill;
+                finalModule.Instance.BringToFront();
                 enjoyProgressBar.Value = enjoyProgressBar.Maximum;
             }
                 else  {
@@ -136,7 +153,7 @@ namespace ProjetDuBar
                 panel.Controls.Add(barModuleAppartCafe.Instance);
                 barModuleAppartCafe.Instance.Dock = DockStyle.Fill;
                 barModuleAppartCafe.Instance.BringToFront();
-                description.Text = "Bienvenue à l'appart , que veux-tu faire?";
+                description.Text = "T'as été virer du bar ISEN mon pote... direction l'appart café! ";
                 enterNewGame.Hide();
                 otherBarButton.Hide();
             }
@@ -179,6 +196,7 @@ namespace ProjetDuBar
         private void actualiser_Click(object sender, EventArgs e)
         {
             actualiserLesVariables(heure, argent, alcool);
+            checkTime();
         }
 
         private void description_TextChanged(object sender, EventArgs e)
@@ -192,7 +210,6 @@ namespace ProjetDuBar
             {
                 object sender = null;
                 EventArgs e = null;
-                description.Text = "19h30 , ON FERME ! ";
                 otherBarButton_Click(sender, e);
 
             }
