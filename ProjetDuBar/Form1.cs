@@ -57,7 +57,7 @@ namespace ProjetDuBar
                 progressBarArgent.Value = progressBarArgent.Minimum;
                 if (!panel.Controls.Contains(finalModule.Instance))
                 {
-                    description.Text = "Rentre chez toi, t'es fauché pour ce soir...";
+                    description.Text = "Rentre chez toi, t'es fauché !";
                     hideForTheEnd();
                     panel.Controls.Add(finalModule.Instance); 
                     finalModule.Instance.Dock = DockStyle.Fill;
@@ -235,6 +235,11 @@ namespace ProjetDuBar
             actualiser.Hide();
             AlcoolText.Hide();
             textBox1.Hide();
+        }
+
+        private void panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
    }

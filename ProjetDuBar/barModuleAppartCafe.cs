@@ -74,7 +74,7 @@ namespace ProjetDuBar
             if (isBeer)
             {
                 Form1.enjoy += 3;
-                description.Text = "Tu kiff à ta table, avec ta bière !";
+                description.Text = "Il ne te manque plus qu'une fille et ta vie sera parfaite :)";
             }
             else
             {
@@ -109,7 +109,7 @@ namespace ProjetDuBar
             hideAllPictures();
             danseAppart.Show();
             Form1.enjoy += 3;
-            description.Text = "T'enflammes le dance floor !";
+            description.Text = "Attention ca va partir en danse du limousin...";
             Form1.heure += Form1.quinzeMin;
         }
 
@@ -120,7 +120,7 @@ namespace ProjetDuBar
             if (isBeer)
             {
                 Form1.enjoy += 3;
-                description.Text = "Tu kiff à ta table, avec ta bière !";
+                description.Text = "Il ne te manque plus qu'une fille et ta vie sera parfaite :)";
             }
             else
             {
@@ -165,7 +165,7 @@ namespace ProjetDuBar
             drinkBeer1.Hide();
             drinkCocaButton.Hide();
             displayButton();
-            description.Text = "BIERE !";
+            description.Text = "Une bière David s'il te plait !";
             barmanButton.Show();
         }
 

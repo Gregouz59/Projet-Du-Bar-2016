@@ -41,14 +41,14 @@ namespace ProjetDuBar
             biereZytho.Show();
             Form1.alcool +=  2;
             Form1.enjoy += 3;
-            Form1.argent -= 5;
+            Form1.argent -= 2;
             Form1.heure += Form1.vingtMin;
             isBeer = true;
             drinkBeer1.Hide();
             drinkBeerRinceCochon.Hide();
             drinkCocaButton.Hide();
             displayButton();
-            description.Text = "BIERE !";
+            description.Text = "HUM !!! Une bonne Chimay";
             barmanButton.Show();
                         }
 
@@ -79,7 +79,7 @@ namespace ProjetDuBar
             cocaZytho.Show();
             displayButton();
             barmanButton.Show();
-            description.Text = "Peite caisse!";
+            description.Text = "Un coca ? Peite caisse!";
         }
 
         public void hideButton()
@@ -109,7 +109,7 @@ namespace ProjetDuBar
             hideAllPictures();
             saucissonZytho.Show();
             displayButton();
-            description.Text = "Hmmm!! Il est bon mon saucisson..";
+            description.Text = "Et un saucisson pour la 6 un !!";
             barmanButton.Show();
         }
 
@@ -122,12 +122,12 @@ namespace ProjetDuBar
             if (isBeer)
             {
                 Form1.enjoy += 3;
-                description.Text = "Tu kiff à ta table, avec ta bière !";
+                description.Text = "Une table, une bière, les copains c'est parfait";
             }
             else
             {
                 Form1.enjoy -= 5;
-                description.Text = "Se poser sans bière, VA AU BAR !";
+                description.Text = "Se poser sans bière, quelle idée? VA AU BAR !";
             }
 
             isBeer = false;
@@ -145,7 +145,7 @@ namespace ProjetDuBar
             {
                 Form1.alcool += 2;
                 Form1.enjoy += 3;
-                description.Text = "Bien joué, t'as graté une bière !";
+                description.Text = "Merci Romain !!!";
             }
             else
             {

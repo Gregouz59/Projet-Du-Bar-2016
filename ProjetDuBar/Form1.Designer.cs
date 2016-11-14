@@ -46,11 +46,12 @@
             // 
             // enterNewGame
             // 
-            this.enterNewGame.Location = new System.Drawing.Point(614, 104);
+            this.enterNewGame.Location = new System.Drawing.Point(819, 128);
+            this.enterNewGame.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.enterNewGame.Name = "enterNewGame";
-            this.enterNewGame.Size = new System.Drawing.Size(147, 23);
+            this.enterNewGame.Size = new System.Drawing.Size(196, 28);
             this.enterNewGame.TabIndex = 0;
-            this.enterNewGame.Text = "New Game";
+            this.enterNewGame.Text = "Nouvelle partie";
             this.enterNewGame.UseVisualStyleBackColor = true;
             this.enterNewGame.Click += new System.EventHandler(this.enterNewGame_Click);
             // 
@@ -58,34 +59,39 @@
             // 
             this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
             this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel.Location = new System.Drawing.Point(13, 13);
+            this.panel.Location = new System.Drawing.Point(17, 16);
+            this.panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(595, 390);
+            this.panel.Size = new System.Drawing.Size(793, 480);
             this.panel.TabIndex = 1;
+            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
             // 
             // progressBarArgent
             // 
-            this.progressBarArgent.Location = new System.Drawing.Point(614, 270);
+            this.progressBarArgent.Location = new System.Drawing.Point(819, 332);
+            this.progressBarArgent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.progressBarArgent.Maximum = 1000;
             this.progressBarArgent.Name = "progressBarArgent";
-            this.progressBarArgent.Size = new System.Drawing.Size(147, 23);
+            this.progressBarArgent.Size = new System.Drawing.Size(196, 28);
             this.progressBarArgent.TabIndex = 3;
             this.progressBarArgent.Click += new System.EventHandler(this.progressBarArgent_Click);
             // 
             // progressBarAlcool
             // 
-            this.progressBarAlcool.Location = new System.Drawing.Point(614, 325);
+            this.progressBarAlcool.Location = new System.Drawing.Point(819, 400);
+            this.progressBarAlcool.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.progressBarAlcool.Maximum = 15;
             this.progressBarAlcool.Name = "progressBarAlcool";
-            this.progressBarAlcool.Size = new System.Drawing.Size(147, 23);
+            this.progressBarAlcool.Size = new System.Drawing.Size(196, 28);
             this.progressBarAlcool.TabIndex = 4;
             this.progressBarAlcool.Click += new System.EventHandler(this.progressBarAlcool_Click);
             // 
             // otherBarButton
             // 
-            this.otherBarButton.Location = new System.Drawing.Point(614, 186);
+            this.otherBarButton.Location = new System.Drawing.Point(819, 229);
+            this.otherBarButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.otherBarButton.Name = "otherBarButton";
-            this.otherBarButton.Size = new System.Drawing.Size(147, 23);
+            this.otherBarButton.Size = new System.Drawing.Size(196, 28);
             this.otherBarButton.TabIndex = 5;
             this.otherBarButton.Text = "aller à l\'appart café";
             this.otherBarButton.UseVisualStyleBackColor = true;
@@ -93,9 +99,10 @@
             // 
             // getMoneyButton
             // 
-            this.getMoneyButton.Location = new System.Drawing.Point(614, 215);
+            this.getMoneyButton.Location = new System.Drawing.Point(819, 265);
+            this.getMoneyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.getMoneyButton.Name = "getMoneyButton";
-            this.getMoneyButton.Size = new System.Drawing.Size(147, 23);
+            this.getMoneyButton.Size = new System.Drawing.Size(196, 28);
             this.getMoneyButton.TabIndex = 6;
             this.getMoneyButton.Text = "aller retirer de l\'argent";
             this.getMoneyButton.UseVisualStyleBackColor = true;
@@ -103,48 +110,54 @@
             // 
             // enjoyProgressBar
             // 
-            this.enjoyProgressBar.Location = new System.Drawing.Point(614, 380);
+            this.enjoyProgressBar.Location = new System.Drawing.Point(819, 468);
+            this.enjoyProgressBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.enjoyProgressBar.Maximum = 40;
             this.enjoyProgressBar.Name = "enjoyProgressBar";
-            this.enjoyProgressBar.Size = new System.Drawing.Size(147, 23);
+            this.enjoyProgressBar.Size = new System.Drawing.Size(196, 28);
             this.enjoyProgressBar.TabIndex = 7;
             // 
             // AlcoolText
             // 
-            this.AlcoolText.Location = new System.Drawing.Point(614, 299);
+            this.AlcoolText.Location = new System.Drawing.Point(819, 368);
+            this.AlcoolText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AlcoolText.Name = "AlcoolText";
-            this.AlcoolText.Size = new System.Drawing.Size(147, 20);
+            this.AlcoolText.Size = new System.Drawing.Size(195, 22);
             this.AlcoolText.TabIndex = 8;
             this.AlcoolText.TextChanged += new System.EventHandler(this.AlcoolText_TextChanged);
             // 
             // ArgentText
             // 
-            this.ArgentText.Location = new System.Drawing.Point(614, 244);
+            this.ArgentText.Location = new System.Drawing.Point(819, 300);
+            this.ArgentText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ArgentText.Name = "ArgentText";
-            this.ArgentText.Size = new System.Drawing.Size(147, 20);
+            this.ArgentText.Size = new System.Drawing.Size(195, 22);
             this.ArgentText.TabIndex = 9;
             this.ArgentText.TextChanged += new System.EventHandler(this.ArgentText_TextChanged);
             // 
             // heureTexte
             // 
-            this.heureTexte.Location = new System.Drawing.Point(614, 416);
+            this.heureTexte.Location = new System.Drawing.Point(819, 512);
+            this.heureTexte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.heureTexte.Name = "heureTexte";
-            this.heureTexte.Size = new System.Drawing.Size(147, 20);
+            this.heureTexte.Size = new System.Drawing.Size(195, 22);
             this.heureTexte.TabIndex = 10;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(614, 354);
+            this.textBox1.Location = new System.Drawing.Point(819, 436);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
+            this.textBox1.Size = new System.Drawing.Size(195, 22);
             this.textBox1.TabIndex = 11;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // actualiser
             // 
-            this.actualiser.Location = new System.Drawing.Point(689, 12);
+            this.actualiser.Location = new System.Drawing.Point(919, 15);
+            this.actualiser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.actualiser.Name = "actualiser";
-            this.actualiser.Size = new System.Drawing.Size(75, 23);
+            this.actualiser.Size = new System.Drawing.Size(100, 28);
             this.actualiser.TabIndex = 12;
             this.actualiser.Text = "Actualiser";
             this.actualiser.UseVisualStyleBackColor = true;
@@ -155,10 +168,11 @@
             this.description.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.description.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.description.Cursor = System.Windows.Forms.Cursors.No;
-            this.description.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.description.Location = new System.Drawing.Point(13, 416);
+            this.description.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.description.Location = new System.Drawing.Point(17, 512);
+            this.description.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(595, 17);
+            this.description.Size = new System.Drawing.Size(793, 33);
             this.description.TabIndex = 13;
             this.description.Text = "C\'est mercredi! Va au zytho !";
             this.description.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -166,9 +180,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 451);
+            this.ClientSize = new System.Drawing.Size(1031, 555);
             this.Controls.Add(this.description);
             this.Controls.Add(this.actualiser);
             this.Controls.Add(this.textBox1);
@@ -182,6 +196,7 @@
             this.Controls.Add(this.otherBarButton);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.enterNewGame);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

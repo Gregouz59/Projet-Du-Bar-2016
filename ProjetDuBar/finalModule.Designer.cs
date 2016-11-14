@@ -46,27 +46,28 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // alcool
             // 
-            this.alcool.Location = new System.Drawing.Point(90, 196);
+            this.alcool.Location = new System.Drawing.Point(90, 209);
             this.alcool.Name = "alcool";
-            this.alcool.Size = new System.Drawing.Size(429, 20);
+            this.alcool.Size = new System.Drawing.Size(429, 22);
             this.alcool.TabIndex = 1;
             this.alcool.TextChanged += new System.EventHandler(this.alcool_TextChanged);
             // 
             // argent
             // 
-            this.argent.Location = new System.Drawing.Point(90, 232);
+            this.argent.Location = new System.Drawing.Point(91, 271);
             this.argent.Name = "argent";
-            this.argent.Size = new System.Drawing.Size(429, 20);
+            this.argent.Size = new System.Drawing.Size(429, 22);
             this.argent.TabIndex = 2;
             // 
             // enjaille
             // 
-            this.enjaille.Location = new System.Drawing.Point(90, 268);
+            this.enjaille.Location = new System.Drawing.Point(90, 332);
             this.enjaille.Name = "enjaille";
-            this.enjaille.Size = new System.Drawing.Size(429, 20);
+            this.enjaille.Size = new System.Drawing.Size(429, 22);
             this.enjaille.TabIndex = 4;
             // 
             // finalModule
