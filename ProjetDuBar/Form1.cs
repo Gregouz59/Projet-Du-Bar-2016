@@ -25,6 +25,7 @@ namespace ProjetDuBar
         public static TimeSpan dixMin = TimeSpan.FromMinutes(10);
         public static TimeSpan vingtCinqMin = TimeSpan.FromMinutes(25);
         public static TimeSpan unMin = TimeSpan.FromMinutes(1);
+        public static bool isAppart = false;
 
 
 
@@ -39,7 +40,7 @@ namespace ProjetDuBar
             argent = 20;
             alcool = 1;
             enjoy = 10;
-            actualiserLesVariables(heure, argent, alcool);
+           // actualiserLesVariables(heure, argent, alcool);
             hideForTheEnd();
         }
 
@@ -103,7 +104,9 @@ namespace ProjetDuBar
                 else  {
                 enjoyProgressBar.Value = enjoy;
                 }
-
+            description.Text = "Bienvenue au Zyhto, que veux-tu faire?";
+            if (isAppart)
+                description.Text = "Bienvenue à l'appartcafe";
         }
 
 
@@ -111,6 +114,7 @@ namespace ProjetDuBar
         private void enterNewGame_Click(object sender, EventArgs e)
         {
             //quand on click sur new game on fait apparaitre le premier barModule1 et disparaitre le boutton "new game"
+            actualiserLesVariables(heure, argent, alcool);
             if (!panel.Controls.Contains(barModule1.Instance))
             {
                 panel.Controls.Add(barModule1.Instance);
@@ -138,9 +142,9 @@ namespace ProjetDuBar
             argent = argent + 10;
             enjoy = enjoy - 1;
             heure = heure + vingtMin;
-            description.Text = "Tu viens d'aller retirer 10e ! ";
             checkTime();
             actualiserLesVariables(heure, argent, alcool);
+            description.Text = "Tu viens d'aller retirer 10e ! ";
         }
 
         //clique pour aller à l'appart café
@@ -157,6 +161,9 @@ namespace ProjetDuBar
             }
             else
                 barModuleAppartCafe.Instance.BringToFront();
+
+            isAppart = true;
+           
         }
 
         private void progressBarAlcool_Click(object sender, EventArgs e)
