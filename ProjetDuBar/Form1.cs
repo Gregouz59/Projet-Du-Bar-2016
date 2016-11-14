@@ -140,12 +140,13 @@ namespace ProjetDuBar
 
         private void getMoneyButton_Click(object sender, EventArgs e)
         {
+            checkTime();
             argent = argent + 10;
             enjoy = enjoy - 1;
             heure = heure + vingtMin;
             description.Text = "Tu viens d'aller retirer 10e ! ";
             actualiserLesVariables(heure, argent, alcool);
-            checkTime();
+            
 
         }
 
@@ -202,9 +203,9 @@ namespace ProjetDuBar
 
         private void actualiser_Click(object sender, EventArgs e)
         {
-            
-            actualiserLesVariables(heure, argent, alcool);
             checkTime();
+            actualiserLesVariables(heure, argent, alcool);
+            
 
         }
 
