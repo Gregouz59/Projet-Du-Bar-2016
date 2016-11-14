@@ -143,9 +143,10 @@ namespace ProjetDuBar
             argent = argent + 10;
             enjoy = enjoy - 1;
             heure = heure + vingtMin;
-            checkTime();
-            actualiserLesVariables(heure, argent, alcool);
             description.Text = "Tu viens d'aller retirer 10e ! ";
+            actualiserLesVariables(heure, argent, alcool);
+            checkTime();
+
         }
 
         //clique pour aller à l'appart café
@@ -201,9 +202,10 @@ namespace ProjetDuBar
 
         private void actualiser_Click(object sender, EventArgs e)
         {
-            checkTime();
-            actualiserLesVariables(heure, argent, alcool);
             
+            actualiserLesVariables(heure, argent, alcool);
+            checkTime();
+
         }
 
         private void description_TextChanged(object sender, EventArgs e)
