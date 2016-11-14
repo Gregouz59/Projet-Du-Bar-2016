@@ -109,6 +109,7 @@ namespace ProjetDuBar
             hideAllPictures();
             danseAppart.Show();
             Form1.enjoy += 3;
+            Form1.alcool -= 1;
             description.Text = "Attention ca va partir en danse du limousin...";
             Form1.heure += Form1.quinzeMin;
         }

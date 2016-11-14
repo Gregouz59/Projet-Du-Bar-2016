@@ -62,7 +62,7 @@
             // drinkCocaButton
             // 
             this.drinkCocaButton.Location = new System.Drawing.Point(4, 85);
-            this.drinkCocaButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.drinkCocaButton.Margin = new System.Windows.Forms.Padding(4);
             this.drinkCocaButton.Name = "drinkCocaButton";
             this.drinkCocaButton.Size = new System.Drawing.Size(205, 31);
             this.drinkCocaButton.TabIndex = 21;
@@ -73,7 +73,7 @@
             // barmanButton
             // 
             this.barmanButton.Location = new System.Drawing.Point(301, 404);
-            this.barmanButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barmanButton.Margin = new System.Windows.Forms.Padding(4);
             this.barmanButton.Name = "barmanButton";
             this.barmanButton.Size = new System.Drawing.Size(212, 31);
             this.barmanButton.TabIndex = 20;
@@ -84,7 +84,7 @@
             // table
             // 
             this.table.Location = new System.Drawing.Point(569, 404);
-            this.table.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.table.Margin = new System.Windows.Forms.Padding(4);
             this.table.Name = "table";
             this.table.Size = new System.Drawing.Size(212, 31);
             this.table.TabIndex = 18;
@@ -94,8 +94,8 @@
             // 
             // conso
             // 
-            this.conso.Location = new System.Drawing.Point(650, 14);
-            this.conso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.conso.Location = new System.Drawing.Point(632, 14);
+            this.conso.Margin = new System.Windows.Forms.Padding(4);
             this.conso.Name = "conso";
             this.conso.Size = new System.Drawing.Size(161, 51);
             this.conso.TabIndex = 17;
@@ -106,7 +106,7 @@
             // danse
             // 
             this.danse.Location = new System.Drawing.Point(33, 404);
-            this.danse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.danse.Margin = new System.Windows.Forms.Padding(4);
             this.danse.Name = "danse";
             this.danse.Size = new System.Drawing.Size(212, 31);
             this.danse.TabIndex = 16;
@@ -117,7 +117,7 @@
             // drinkBeer1
             // 
             this.drinkBeer1.Location = new System.Drawing.Point(4, 34);
-            this.drinkBeer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.drinkBeer1.Margin = new System.Windows.Forms.Padding(4);
             this.drinkBeer1.Name = "drinkBeer1";
             this.drinkBeer1.Size = new System.Drawing.Size(205, 31);
             this.drinkBeer1.TabIndex = 15;
@@ -133,7 +133,7 @@
             this.description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.description.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.description.Location = new System.Drawing.Point(0, 455);
-            this.description.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.description.Margin = new System.Windows.Forms.Padding(4);
             this.description.Name = "description";
             this.description.Size = new System.Drawing.Size(820, 23);
             this.description.TabIndex = 22;
@@ -143,7 +143,7 @@
             // 
             this.gratterAppart.Image = ((System.Drawing.Image)(resources.GetObject("gratterAppart.Image")));
             this.gratterAppart.Location = new System.Drawing.Point(213, 54);
-            this.gratterAppart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gratterAppart.Margin = new System.Windows.Forms.Padding(4);
             this.gratterAppart.Name = "gratterAppart";
             this.gratterAppart.Size = new System.Drawing.Size(411, 249);
             this.gratterAppart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -154,7 +154,7 @@
             // 
             this.biereAppart.Image = ((System.Drawing.Image)(resources.GetObject("biereAppart.Image")));
             this.biereAppart.Location = new System.Drawing.Point(213, 54);
-            this.biereAppart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.biereAppart.Margin = new System.Windows.Forms.Padding(4);
             this.biereAppart.Name = "biereAppart";
             this.biereAppart.Size = new System.Drawing.Size(411, 249);
             this.biereAppart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +165,7 @@
             // 
             this.tableAppart.Image = ((System.Drawing.Image)(resources.GetObject("tableAppart.Image")));
             this.tableAppart.Location = new System.Drawing.Point(213, 54);
-            this.tableAppart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableAppart.Margin = new System.Windows.Forms.Padding(4);
             this.tableAppart.Name = "tableAppart";
             this.tableAppart.Size = new System.Drawing.Size(411, 249);
             this.tableAppart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -176,7 +176,7 @@
             // 
             this.barmanAppart.Image = ((System.Drawing.Image)(resources.GetObject("barmanAppart.Image")));
             this.barmanAppart.Location = new System.Drawing.Point(213, 54);
-            this.barmanAppart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barmanAppart.Margin = new System.Windows.Forms.Padding(4);
             this.barmanAppart.Name = "barmanAppart";
             this.barmanAppart.Size = new System.Drawing.Size(411, 249);
             this.barmanAppart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,7 +187,7 @@
             // 
             this.danseAppart.Image = ((System.Drawing.Image)(resources.GetObject("danseAppart.Image")));
             this.danseAppart.Location = new System.Drawing.Point(213, 54);
-            this.danseAppart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.danseAppart.Margin = new System.Windows.Forms.Padding(4);
             this.danseAppart.Name = "danseAppart";
             this.danseAppart.Size = new System.Drawing.Size(411, 249);
             this.danseAppart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +198,7 @@
             // 
             this.cocaAppart.Image = ((System.Drawing.Image)(resources.GetObject("cocaAppart.Image")));
             this.cocaAppart.Location = new System.Drawing.Point(213, 54);
-            this.cocaAppart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cocaAppart.Margin = new System.Windows.Forms.Padding(4);
             this.cocaAppart.Name = "cocaAppart";
             this.cocaAppart.Size = new System.Drawing.Size(411, 249);
             this.cocaAppart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -209,7 +209,7 @@
             // 
             this.chiner.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chiner.Location = new System.Drawing.Point(637, 319);
-            this.chiner.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chiner.Margin = new System.Windows.Forms.Padding(4);
             this.chiner.Name = "chiner";
             this.chiner.Size = new System.Drawing.Size(144, 28);
             this.chiner.TabIndex = 29;
@@ -221,7 +221,7 @@
             // 
             this.chinerMoche.Image = ((System.Drawing.Image)(resources.GetObject("chinerMoche.Image")));
             this.chinerMoche.Location = new System.Drawing.Point(213, 54);
-            this.chinerMoche.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chinerMoche.Margin = new System.Windows.Forms.Padding(4);
             this.chinerMoche.Name = "chinerMoche";
             this.chinerMoche.Size = new System.Drawing.Size(411, 249);
             this.chinerMoche.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -232,7 +232,7 @@
             // 
             this.chinerRiche.Image = ((System.Drawing.Image)(resources.GetObject("chinerRiche.Image")));
             this.chinerRiche.Location = new System.Drawing.Point(213, 54);
-            this.chinerRiche.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chinerRiche.Margin = new System.Windows.Forms.Padding(4);
             this.chinerRiche.Name = "chinerRiche";
             this.chinerRiche.Size = new System.Drawing.Size(411, 249);
             this.chinerRiche.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -265,7 +265,7 @@
             // 
             this.jaggerPicture.Image = ((System.Drawing.Image)(resources.GetObject("jaggerPicture.Image")));
             this.jaggerPicture.Location = new System.Drawing.Point(301, 34);
-            this.jaggerPicture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.jaggerPicture.Margin = new System.Windows.Forms.Padding(4);
             this.jaggerPicture.Name = "jaggerPicture";
             this.jaggerPicture.Size = new System.Drawing.Size(259, 293);
             this.jaggerPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -297,7 +297,7 @@
             this.Controls.Add(this.conso);
             this.Controls.Add(this.danse);
             this.Controls.Add(this.drinkBeer1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "barModuleAppartCafe";
             this.Size = new System.Drawing.Size(833, 480);
             this.Load += new System.EventHandler(this.barModuleAppartCafe_Load);

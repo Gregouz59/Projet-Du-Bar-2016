@@ -46,7 +46,10 @@ namespace ProjetDuBar
 
         public void actualiserLesVariables(TimeSpan h, int ar, int al)
         {
-            
+            description.Text = "Bienvenue au Zyhto, que veux-tu faire?";
+            if (isAppart)
+                description.Text = "Bienvenue à l'appartcafe";
+
             heureTexte.Text = "Heure:  " + h;
             ArgentText.Text = "Argent: " + ar;
             AlcoolText.Text = "Alcool: " + al;
@@ -104,9 +107,7 @@ namespace ProjetDuBar
                 else  {
                 enjoyProgressBar.Value = enjoy;
                 }
-            description.Text = "Bienvenue au Zyhto, que veux-tu faire?";
-            if (isAppart)
-                description.Text = "Bienvenue à l'appartcafe";
+            
         }
 
 
