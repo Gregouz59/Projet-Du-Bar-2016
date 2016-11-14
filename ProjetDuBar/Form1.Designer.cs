@@ -171,8 +171,9 @@
             this.description.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.description.Location = new System.Drawing.Point(17, 512);
             this.description.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.description.Multiline = true;
             this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(793, 33);
+            this.description.Size = new System.Drawing.Size(793, 40);
             this.description.TabIndex = 13;
             this.description.Text = "C\'est mercredi! Va au zytho !";
             this.description.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
