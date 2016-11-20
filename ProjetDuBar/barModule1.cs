@@ -12,10 +12,11 @@ namespace ProjetDuBar
 {
     public partial class barModule1 : UserControl 
     {
-        bool isBeer = false;
-        
 
+        bool isBeer = false;
         private static barModule1 _instance;
+
+
         public static barModule1 Instance
         {
             get
@@ -25,6 +26,8 @@ namespace ProjetDuBar
                 return _instance;
             }
         }
+
+        //ne pas afficher les images et cacher les 3 boutons de consommations
         public barModule1()
         {
             InitializeComponent();
@@ -82,6 +85,7 @@ namespace ProjetDuBar
             description.Text = "Un coca ? Peite caisse!";
         }
 
+        //cacher les boutons lorsque l'on clique sur le barman
         public void hideButton()
         {
             danse.Hide();
@@ -89,6 +93,7 @@ namespace ProjetDuBar
             table.Hide();
         }
 
+        //puis remettre les boutons
         public void displayButton()
         {
             danse.Show();
@@ -100,7 +105,6 @@ namespace ProjetDuBar
         {
             //prendre un saucisson
             Form1.argent -= 3;
-            //Form1.heure = Form1.heure + Form1.quinzeMin;
             Form1.alcool -= 1;
             Form1.heure += Form1.quinzeMin;
             drinkBeer1.Hide();
@@ -133,7 +137,7 @@ namespace ProjetDuBar
             isBeer = false;
             Form1.heure += Form1.quinzeMin;
 
-    }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -156,9 +160,9 @@ namespace ProjetDuBar
             //Temps perdu a gratter
             Form1.heure += Form1.cinqMin;
             
-
         }
 
+        //aller danser
         private void button1_Click(object sender, EventArgs e)
         {
             hideAllPictures();

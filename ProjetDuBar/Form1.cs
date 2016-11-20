@@ -12,6 +12,8 @@ namespace ProjetDuBar
 {
     public partial class Form1 : Form
     {
+
+        //Creation des variables 
         public static int argent;
         public static int alcool;
         public static int enjoy;
@@ -26,9 +28,6 @@ namespace ProjetDuBar
         public static TimeSpan vingtCinqMin = TimeSpan.FromMinutes(25);
         public static TimeSpan unMin = TimeSpan.FromMinutes(1);
         public static bool isAppart = false;
-
-
-
         public static Random _r = new Random();
 
         public Form1()
@@ -40,10 +39,11 @@ namespace ProjetDuBar
             argent = 20;
             alcool = 1;
             enjoy = 10;
-           // actualiserLesVariables(heure, argent, alcool);
             hideForTheEnd();
         }
 
+        //fonction qui actualise argent heure alcool et enjaille
+        //fonction qui régit les conditions de fin du jeu
         public void actualiserLesVariables(TimeSpan h, int ar, int al)
         {
             description.Text = "Bienvenue au Zyhto, que veux-tu faire?";
@@ -111,7 +111,7 @@ namespace ProjetDuBar
         }
 
 
-
+        //bouton nouvelle partie
         private void enterNewGame_Click(object sender, EventArgs e)
         {
             //quand on click sur new game on fait apparaitre le premier barModule1 et disparaitre le boutton "new game"
@@ -137,7 +137,7 @@ namespace ProjetDuBar
                 barModule1.Instance.BringToFront();
 
         }
-
+        //fonction pour retirer de l'argent
         private void getMoneyButton_Click(object sender, EventArgs e)
         {
             checkTime();
@@ -169,11 +169,12 @@ namespace ProjetDuBar
            
         }
 
+        //progresse bar alcool
         private void progressBarAlcool_Click(object sender, EventArgs e)
         {
             progressBarAlcool.Maximum = 20;
         }
-
+        //progresse bar argent
         private void progressBarArgent_Click(object sender, EventArgs e)
         {
             progressBarArgent.Maximum = 50;
@@ -189,13 +190,6 @@ namespace ProjetDuBar
             
         }
 
-
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -205,7 +199,6 @@ namespace ProjetDuBar
         {
             checkTime();
             actualiserLesVariables(heure, argent, alcool);
-            
 
         }
 
@@ -214,6 +207,7 @@ namespace ProjetDuBar
 
         }
 
+        //fonction qui permet de surveiller l'heure
         public void checkTime()
         {
             if(heure >= timeToGo && heure <= endGame)
@@ -235,6 +229,7 @@ namespace ProjetDuBar
             }
         }
 
+        //fonction créer pour le finalModule: permet de ne pas afficher un certain nombre de boutons
         public void hideForTheEnd()
         {
             otherBarButton.Hide();

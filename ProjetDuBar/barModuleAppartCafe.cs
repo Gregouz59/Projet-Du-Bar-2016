@@ -14,8 +14,9 @@ namespace ProjetDuBar
     {
 
         bool isBeer = false;
-
         private static barModuleAppartCafe _instance;
+
+
         public static barModuleAppartCafe Instance
         {
             get
@@ -25,6 +26,7 @@ namespace ProjetDuBar
                 return _instance;
             }
         }
+
         public barModuleAppartCafe()
         {
             InitializeComponent();
@@ -36,6 +38,7 @@ namespace ProjetDuBar
 
         }
 
+        //bouton barman
         private void barmanButton_Click(object sender, EventArgs e)
         {
             hideAllPictures();
@@ -48,7 +51,7 @@ namespace ProjetDuBar
             barmanButton.Hide(); //désolé j'ai changer le nom après coup, button6=barmanButton
         }
     
-
+        //cacher les boutons suivant si on clqiue sur le barman
         public void hideButton()
         {
             danse.Hide();
@@ -57,6 +60,7 @@ namespace ProjetDuBar
             chiner.Hide();
         }
 
+        //les afficher
         public void displayButton()
         {
             danse.Show();
@@ -65,28 +69,7 @@ namespace ProjetDuBar
             chiner.Show();
         }
 
-     
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            hideAllPictures();
-            tableAppart.Show();
-            if (isBeer)
-            {
-                Form1.enjoy += 3;
-                description.Text = "Il ne te manque plus qu'une fille et ta vie sera parfaite :)";
-            }
-            else
-            {
-                Form1.enjoy -= 5;
-                description.Text = "Se poser sans bière, VA AU BAR !";
-            }
-
-            isBeer = false;
-            Form1.heure += Form1.dixMin;
-
-        }
-
+        //cacher l'ensemble des photos
         public void hideAllPictures()
         {
             cocaAppart.Hide();
@@ -104,6 +87,7 @@ namespace ProjetDuBar
             
         }
 
+        //aler danser
         private void danse_Click(object sender, EventArgs e)
         {
             hideAllPictures();
@@ -114,6 +98,7 @@ namespace ProjetDuBar
             Form1.heure += Form1.quinzeMin;
         }
 
+        //aller se poser a une table
         private void table_Click(object sender, EventArgs e)
         {
             hideAllPictures();
@@ -133,6 +118,7 @@ namespace ProjetDuBar
             Form1.heure += Form1.dixMin;
         }
 
+        //gratter de l'argent
         private void conso_Click(object sender, EventArgs e)
         {
             hideAllPictures();
@@ -154,6 +140,7 @@ namespace ProjetDuBar
             Form1.heure += Form1.cinqMin;
         }
 
+        //boire une biere
         private void drinkBeer1_Click_1(object sender, EventArgs e)
         {
             hideAllPictures();
@@ -196,13 +183,14 @@ namespace ProjetDuBar
             drinkCocaButton.Hide();
             hideAllPictures();
             jaggerPicture.Show();
-          //  cocaAppart.Show();   AFFICHEER UNE PHOTO D UN JAGGERBOMB 
             displayButton();
             barmanButton.Show();
             Jagger.Hide();
             description.Text = "Ca attaque fort !!!";
         }
 
+
+        //aller draguer
         private void chiner_Click(object sender, EventArgs e)
         {
             hideAllPictures();
